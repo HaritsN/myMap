@@ -1,15 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Bridgette Simple Map </ion-title>
+    <ion-title> Raga's Map </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Bridgette's Map</ion-title>
+      <ion-title size="large">Raga's Map</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-item>
+    <ion-select [(ngModel)]="selectedBasemap" (ionChange)="changeBasemap()">
+      <ion-select-option value="topo-vector">Topographic</ion-select-option>
+      <ion-select-option value="streets-vector">Streets</ion-select-option>
+      <ion-select-option value="satellite">Satellite</ion-select-option>
+    </ion-select>
+  </ion-item>
 
   <div id="container">
     <!--<strong>Ready to create an app?</strong>
